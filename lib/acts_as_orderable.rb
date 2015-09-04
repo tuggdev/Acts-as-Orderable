@@ -92,7 +92,8 @@ module Acts
             self.element_order = 0
           end
         end
-        self.save
+        # We don't want validations to be run as we're only setting the default element order
+        self.save(validate: false)
       end
 
       # Moves us up (+) or down (-)
